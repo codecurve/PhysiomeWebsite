@@ -1,30 +1,33 @@
 ---
-_layout: software-page
-_template: page
+_layout: default
+_template: software-project-index
 _fieldset: page
 title: About Cmgui
+intro: >
+  Standalone application for visualising and interacting with mathematical field models.
 ---
-<img src="/assets/img/software/cmgui/680x280/cmgui-demo.jpg" alt="A software developer demonsrates the Cmgui software." />
+
+<img src="/assets/img/software/cmgui/cmgui_ui.jpg" alt="Cmgui application windows" title="Cmgui application windows" height="480" />
+
 ### Overview
 
-Cmgui is a generic open-source modelling and visualisation package developed at the ABI with significant external contributions from industry. It is commonly used to enable researchers to visualise biomedical images alongside the dynamic geometry fields from computer models of cells, tissues and organs. Cmgui is coded in C/C++ and consists of data structures for describing hierarchical models built from mathematical fields.
+Cmgui is a generic open-source modelling and visualisation package developed at the [Auckland Bioengineering Institute](http://abi.auckland.ac.nz) with contributions from industry. It is commonly used by researchers to visualise dynamic spatially-varying fields from computer models of organs, tissues and cells -- often combined with biomedical images. Cmgui is coded in C/C++ and consists of data structures for describing hierarchical models built from mathematical fields.
 
-### Visualising data
+### Features
 
-Cmgui also contains graphics conversion operations for making field visualisations, and tools for interactively manipulating models. Dr Richard Christie leads the development of cmgui alongside Alan Wu, and with an external collaboration with Shane Blackett and Carey Stevens at Spark Dental Technology Ltd.
+Some of the main features of Cmgui are as follows:
 
-### The Zinc plugin
+- Dynamic model representation including finite element and boundary element meshes
+- Image-based fields and image processing
+- Mathematical field abstraction for generating derived field quantities
+- Graphics conversion algorithms for making visualisations of fields and domains
+- High quality OpenGL rendering
+- Other utilities including interactive selection and editing, mesh creation, optimisation
 
-A major part of the cmgui project has been the development of a unique web browser extension or plug-in called ZINC for viewing and interacting with cmgui scenes on the web. While cmgui began as a standalone programme, the focus is now on further developing the cmgui library for independent software developers wishing to describe their models and visualise graphics.
-<ul class="arrow-2 dotted"><li><a href="/software/zincplugin/">Find out more about the Zinc plugin</a></li></ul>
+### Command line + GUI driven
 
-### Contributors
+A custom command language integrated into a built-in perl interpreter can drive all functionality in Cmgui. Added to this are interactive dialogs for creating and editing the visualisation and other graphics objects, graphics windows and other dialogs. Script commands can be output to save the current state, for reproducing it when next run.
 
-- Dr Richard Christie
-- Alan Wu
-- Dr David Bullivant
-- Hugh Sorby
-- Randall Britten
-- David Nickerson
-- Dr Duane Malcolm
-- Dougal Cowan
+### Built on Zinc
+
+The core engine within the Cmgui application is the [OpenCMISS-Zinc Library](/software/opencmiss/zinc), and documentation for the Zinc data model is equally valid in Cmgui.
